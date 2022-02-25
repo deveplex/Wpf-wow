@@ -5,6 +5,29 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\fa-brands-400.ttf" />
+    <None Remove="Fonts\fa-regular-400.ttf" />
+    <None Remove="Fonts\fa-solid-900.ttf" />
+    <None Remove="Images\36164dbae3924f15af77e7e4542ff359.jpg" />
+    <None Remove="Images\logo.ico" />
+    <None Remove="Images\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\fa-brands-400.ttf" />
+    <Resource Include="Fonts\fa-regular-400.ttf" />
+    <Resource Include="Fonts\fa-solid-900.ttf" />
+    <Resource Include="Images\36164dbae3924f15af77e7e4542ff359.jpg" />
+    <Resource Include="Images\logo.ico" />
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
 
 </Project>

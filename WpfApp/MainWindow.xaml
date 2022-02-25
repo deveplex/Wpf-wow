@@ -5,8 +5,277 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        d:DesignHeight="800" d:DesignWidth="1200" DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="软件发布管理系统" AllowsTransparency="True" WindowStyle="None" BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFCCCCCC" WindowState="Normal">
+    <Window.Resources>
+        <local:WindowMaximizedConverter x:Key="WindowMaximizedConverter"/>
+        <local:WindowNormalConverter x:Key="WindowNormalConverter"/>
+        <Style TargetType="{x:Type Control}">
+            <Setter Property="Foreground" Value="#FFAAAAAA"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsEnabled" Value="True" />
+                        <Condition Property="IsMouseOver" Value="True" />
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
 
-    </Grid>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="#FFAAAAAA"/>
+        </Style>
+    </Window.Resources>
+    <Border BorderThickness="1" BorderBrush="#FF222222" Background="#FF1A1C23">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="Header" Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition x:Name="Footer" Height="24"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="WindowTitleBar" Grid.Row="0" BorderThickness="0" Background="#FF1F2128" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Foreground" Value="#FFAAAAAA"/>
+                        </Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="#FFAAAAAA"/>
+                        </Style>
+                    </Grid.Resources>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0">
+                        <Image Source="/Images/logo.png" Height="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0"/>
+                        <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">黑盒工坊</TextBlock>
+                    </StackPanel>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <StackPanel.Resources>
+                                <ControlTemplate x:Key="mm"  TargetType="{x:Type Button}">
+                                    <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsEnabled" Value="True" />
+                                                <Condition Property="IsMouseOver" Value="True" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter TargetName="Bd" Property="Cursor" Value="Hand"/>
+                                        </MultiTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </StackPanel.Resources>
+                            <Button  Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="{DynamicResource FasIconicFont3}"  Template="{StaticResource mm}"  Padding="10,0" VerticalAlignment="Center">&#xf590;</Button>
+                        </StackPanel>
+
+                    </Grid>
+                    <UniformGrid Rows="1" Grid.Column="2" Width="120" Height="30" VerticalAlignment="Top">
+                        <UniformGrid.Resources>
+                            <ControlTemplate x:Key="mm"  TargetType="{x:Type Button}">
+                                <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </UniformGrid.Resources>
+                        <Button Background="Transparent" BorderThickness="1" BorderBrush="{x:Null}" Padding="13" Click="MinimizeWindow" Command="{Binding MinimizationWindow,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorType=local:MainWindow}}">
+                            <Button.Content>
+                                <Path Stretch="Uniform" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Data="M832,490.66667 L533.33333,490.66667 C533.33333,490.66667 490.66667,490.66667 490.66667,490.66667 L192,488.53333 C179.2,488.53333 170.66667,497.06667 170.66667,509.86667 170.66667,522.66667 179.2,531.2 192,531.2 L490.66667,533.33333 C490.66667,533.33333 533.33333,533.33333 533.33333,533.33333 L832,533.33333 C844.8,533.33333 853.33333,524.8 853.33333,512 853.33333,501.33333 842.66667,490.66667 832,490.66667 z">
+                                </Path>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsEnabled" Value="True" />
+                                                <Condition Property="IsMouseOver" Value="True" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter TargetName="Bd" Property="Background" Value="#FF646464"/>
+                                            <Setter Property="Button.Foreground" Value="#FF000000"/>
+                                        </MultiTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="1" BorderBrush="{x:Null}" Padding="9" Click="MaximizeWindow" Command="{Binding MaximizationWindow,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType=Window}}">
+                            <Button.Content>
+                                <Grid>
+                                    <Path Stretch="Uniform" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Data="M0.479571 0l0 1024 1023.040858 0L1023.520429 0 0.479571 0zM977.301349 977.78092 44.922463 977.78092 44.922463 42.666704l932.378887 0L977.301349 977.78092z" Visibility="{Binding WindowState,RelativeSource={RelativeSource AncestorType=Window},Converter={StaticResource WindowMaximizedConverter}}">
+                                    </Path>
+                                    <Path Stretch="Uniform" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Data="M1023.5204,786.74437 L1023.5204,0 99.926848,0 100.42685,42.666704 977.30135,42.666704 977.30135,786.9688 z M0.479571,245.54187 L0.479571,1024 741.58316,1024 740.99142,246.94719 z M693.77792,977.78092 L44.922463,977.78092 44.922463,293.3471 693.77662,294.26383 z" Visibility="{Binding WindowState,RelativeSource={RelativeSource AncestorType=Window},Converter={StaticResource WindowNormalConverter}}">
+                                    </Path>
+                                </Grid>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsEnabled" Value="True" />
+                                                <Condition Property="IsMouseOver" Value="True" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter TargetName="Bd" Property="Background" Value="#FF646464"/>
+                                            <Setter Property="Button.Foreground" Value="#FF000000"/>
+                                        </MultiTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="1" BorderBrush="{x:Null}" Padding="9" Click="CloseWindow" Command="{Binding ClosedWindow,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType=local:MainWindow}}">
+                            <Button.Content>
+                                <Path Stretch="Uniform" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Data="M541.866667 512l262.4-262.4c8.533333-8.533333 8.533333-21.333333 0-29.866667s-21.333333-8.533333-29.866667 0L512 482.133333 249.6 219.733333c-8.533333-8.533333-21.333333-8.533333-29.866667 0-8.533333 8.533333-8.533333 21.333333 0 29.866667L482.133333 512 219.733333 774.4c-8.533333 8.533333-8.533333 21.333333 0 29.866667 4.266667 4.266667 10.666667 6.4 14.933334 6.4s10.666667-2.133333 14.933333-6.4L512 544l260.266667 262.4c4.266667 4.266667 10.666667 6.4 14.933333 6.4 6.4 0 10.666667-2.133333 14.933333-6.4 8.533333-8.533333 8.533333-21.333333 0-29.866667L541.866667 512z">
+                                </Path>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsEnabled" Value="True" />
+                                                <Condition Property="IsMouseOver" Value="True" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter TargetName="Bd" Property="Background" Value="#FFB60C0C"/>
+                                            <Setter Property="Button.Foreground" Value="#FF000000"/>
+                                        </MultiTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </UniformGrid>
+                </Grid>
+
+            </Border>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border x:Name="NavigationBar" Grid.Row="0" Background="#FF1F2128" BorderThickness="0,0,0,1" BorderBrush="#FF323232" Padding="0,10,0,0">
+                    <Grid Margin="10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.Resources>
+                        </Grid.Resources>
+                        <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Hidden">
+                            <Button Background="#FF646464" Foreground="#FFCCCCCC" BorderBrush="{x:Null}" Margin="3,0" Padding="5" FontFamily="{DynamicResource FasIconicFont3}"  VerticalAlignment="Center">&#xf002;</Button>
+                            <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0.5">
+                                        <GradientStop Color="#FF35ADF9" Offset="0"/>
+                                        <GradientStop Color="#FF7C59FD" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background> 启动游戏
+                            </Button>
+                        </StackPanel>
+                        <WrapPanel Grid.Column="1" Orientation="Horizontal" ItemHeight="40" HorizontalAlignment="Center" VerticalAlignment="Stretch" >
+                            <WrapPanel.Resources>
+                                <Style TargetType="{x:Type RadioButton}">
+                                    <Setter Property="FontSize" Value="13"/>
+                                    <Setter Property="Foreground" Value="#FFAAAAAA"/>
+                                </Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Foreground" Value="#FFCCCCCC"/>
+                                </Style>
+                                <ControlTemplate x:Key="mm"  TargetType="{x:Type RadioButton}">
+                                    <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                        <TextBlock x:Name="T" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Text="{TemplateBinding Content}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsEnabled" Value="True" />
+                                                <Condition Property="IsMouseOver" Value="True" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter TargetName="T" Property="Foreground" Value="#FFEEEEEE"/>
+                                            <Setter TargetName="Bd" Property="Cursor" Value="Hand"/>
+                                        </MultiTrigger>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter TargetName="T" Property="Foreground" Value="#FFEEEEEE"/>
+                                            <Setter TargetName="Bd" Property="BorderBrush" Value="#FF595CFD"/>
+                                            <Setter TargetName="Bd" Property="BorderThickness" Value="0,0,0,2"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </WrapPanel.Resources>
+                            <RadioButton Background="{x:Null}" BorderBrush="{x:Null}" Template="{StaticResource mm}" GroupName="A" IsChecked="True" Margin="10,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Click="NavigationBarClick" Tag="page1" Command="{Binding NavigationBarClick,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorType=local:MainWindow}}">插件库</RadioButton>
+                            <RadioButton Background="{x:Null}" BorderBrush="{x:Null}" Template="{StaticResource mm}" GroupName="A" Margin="10,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Click="NavigationBarClick" Tag="page2" Command="{Binding NavigationBarClick,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorType=local:MainWindow}}">WA字符串</RadioButton>
+                            <RadioButton Background="{x:Null}" BorderBrush="{x:Null}" Template="{StaticResource mm}" GroupName="A" Margin="10,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Click="NavigationBarClick" Tag="page3" Command="{Binding NavigationBarClick,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorType=local:MainWindow}}">配置同步</RadioButton>
+                            <RadioButton Background="{x:Null}" BorderBrush="{x:Null}" Template="{StaticResource mm}" GroupName="A" Margin="10,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Click="NavigationBarClick" Tag="page4" Command="{Binding NavigationBarClick,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorType=local:MainWindow}}">云端备份</RadioButton>
+                            <RadioButton Background="{x:Null}" BorderBrush="{x:Null}" Template="{StaticResource mm}" GroupName="A" Margin="10,0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Click="NavigationBarClick" Tag="page5" Command="{Binding NavigationBarClick,RelativeSource={ RelativeSource Mode=FindAncestor,AncestorType=local:MainWindow}}">配置分享</RadioButton>
+                        </WrapPanel>
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Foreground" Value="#FFAAAAAA"/>
+                                </Style>
+                                <ControlTemplate x:Key="mm"  TargetType="{x:Type Button}">
+                                    <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsEnabled" Value="True" />
+                                                <Condition Property="IsMouseOver" Value="True" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter TargetName="Bd" Property="Cursor" Value="Hand"/>
+                                            <Setter Property="Foreground" Value="#FFEEEEEE"/>
+                                        </MultiTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </StackPanel.Resources>
+                            <Button Background="{x:Null}" BorderBrush="{x:Null}" Template="{StaticResource mm}" FontFamily="{DynamicResource FasIconicFont3}" Padding="10,0" VerticalAlignment="Center">&#xf0e0;  消息</Button>
+                            <Button  Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="{DynamicResource FasIconicFont3}"  Template="{StaticResource mm}"  Padding="10,0" VerticalAlignment="Center">&#xf013;  设置</Button>
+                            <Button  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF646464" FontFamily="{DynamicResource FasIconicFont3}" Height="33" Width="33" FontSize="32" Padding="0" VerticalAlignment="Center">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Grid>
+                                            <Ellipse x:Name="E" Width="Auto" Height="Auto" StrokeThickness="2" Fill="{TemplateBinding Background}"></Ellipse>
+                                            <ContentPresenter Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" Margin="2,-2,0,0"/>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <MultiTrigger>
+                                                <MultiTrigger.Conditions>
+                                                    <Condition Property="IsEnabled" Value="True" />
+                                                    <Condition Property="IsMouseOver" Value="True" />
+                                                </MultiTrigger.Conditions>
+                                                <Setter TargetName="E" Property="Stroke" Value="#FF888888"/>
+                                            </MultiTrigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>                                &#xf2bd;
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Frame x:Name="Pages" Grid.Row="1" NavigationUIVisibility="Hidden" Source="/Page1.xaml"></Frame>
+            </Grid>
+
+        </Grid>
+    </Border>
 </Window>
