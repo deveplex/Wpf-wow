@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         d:DesignHeight="800" d:DesignWidth="1200" DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="软件发布管理系统" AllowsTransparency="True" WindowStyle="None" BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFCCCCCC" WindowState="Normal">
+        Title="黑盒工坊" AllowsTransparency="True" WindowStyle="None" BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFCCCCCC" WindowState="Normal">
     <Window.Resources>
         <local:WindowMaximizedConverter x:Key="WindowMaximizedConverter"/>
         <local:WindowNormalConverter x:Key="WindowNormalConverter"/>
