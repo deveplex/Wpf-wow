@@ -31,7 +31,7 @@
                     </Border>
                     <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" Template="{StaticResource ScrollViewer}" VerticalScrollBarVisibility="Auto">
                         <StackPanel>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -46,17 +46,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -77,7 +94,7 @@
                                 </Grid>
                             </Border>
 
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -92,17 +109,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -122,7 +156,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -137,17 +171,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -167,7 +218,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -182,17 +233,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -212,7 +280,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -227,17 +295,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -257,7 +342,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -272,17 +357,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -302,7 +404,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -317,17 +419,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -347,7 +466,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -362,17 +481,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -392,7 +528,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -407,17 +543,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -437,7 +590,7 @@
                                     </Border>
                                 </Grid>
                             </Border>
-                            <Border Padding="10,0,0,0">
+                            <Border Padding="15,0,0,0">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Style.Triggers>
@@ -452,17 +605,34 @@
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" Height="64" Width="64" Margin="10" CornerRadius="3">
+                                    <Border Grid.Column="0" Height="64" Width="64" Margin="15" CornerRadius="3">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Images/36164dbae3924f15af77e7e4542ff359.jpg"/>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="10,10,0,10" Margin="10,0,20,0" Background="Transparent">
-                                        <Grid>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,1" Padding="0,10,0,10" Margin="10,0,20,0" Background="Transparent" VerticalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Center">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="auto"/>
                                             </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <Label Foreground="White" Padding="0,3">Deadly Boss Mods (DBM)</Label>
+                                                <TextBlock Margin="0,3" FontSize="12"  Foreground="#FFAAAAAA">安装此插件后，您将可以轻松查看玩家的神话基石分数和突袭进度 - 所有这些都无需离开游戏！</TextBlock>
+                                                <WrapPanel Orientation="Horizontal" Margin="0,3">
+                                                    <WrapPanel.Resources>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="Padding" Value="0,0,15,0"/>
+                                                            <Setter Property="Foreground" Value="#FF808080"/>
+                                                            <Setter Property="FontSize" Value="11"/>
+                                                        </Style>
+                                                    </WrapPanel.Resources>
+                                                    <TextBlock>文件大小: 65.44M</TextBlock>
+                                                    <TextBlock>更新时间: 2021-07-05</TextBlock>
+                                                    <TextBlock>插件版本: 9.2.0.903</TextBlock>
+                                                    <TextBlock>支持系统: Windows</TextBlock>
+                                                </WrapPanel>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                                 <Button BorderBrush="{x:Null}" Foreground="#FFCCCCCC" Margin="3,0" Padding="15,5" VerticalAlignment="Center">
                                                     <Button.Resources>
@@ -482,7 +652,6 @@
                                     </Border>
                                 </Grid>
                             </Border>
-
 
                         </StackPanel>
                     </ScrollViewer>
